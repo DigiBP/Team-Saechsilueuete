@@ -1,6 +1,6 @@
 # CliniPharm
 
-##Team Members
+**Team Members**
 Bönhof Berenice
 Buholzer Michael Andreas
 Lykovas Andrejus
