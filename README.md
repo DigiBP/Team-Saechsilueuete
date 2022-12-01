@@ -1,4 +1,4 @@
-# CliniPharm
+# Veterinary Drug Compendium
 
 **Team Members**\
 Bönhof Berenice\
@@ -27,7 +27,9 @@ The process starts when an authorisation holder uploads files to the dedicated D
 **File Documents:**
 
 In this step, an Entry Team member moves the received documents from the folder of the dedicated Dropbox to local filing. Locally all the documents belonging to one entry are stored in a folder with the following naming convention: “Swissmedic number”_”name of the drug”_”date of receipt”
-Review Document Completeness:
+
+**Review Document Completeness:**
+
 Next, the filed documents are checked for completeness. The Entry Team member looks at the received documents and determines if they are complete and correct. To determine completeness, the worker reads in the documents if this is a new entry or what type of change needs to be done and which information texts have been approved by Swissmedic. Depending on this, the required documents can vary. To determine correctness, the worker looks at the content of the received documents and checks if it fulfills specific criteria (e.g. in the PDF-files, there is no Swissmedic logo or stamp allowed).
 
 **Request missing documents or information:**
