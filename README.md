@@ -5,7 +5,6 @@ Bönhof Berenice
 Buholzer Michael Andreas
 Lykovas Andrejus
 Santome Bragado Ruben
-
 Schwander Sandro
 
 ## Table of Contents
