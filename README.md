@@ -2,7 +2,7 @@
 
 **Team Members**\
 Bönhof Berenice\
-Buholzer Michael Andreas\
+Buholzer Michael\
 Lykovas Andrejus\
 Santome Bragado Ruben\
 Schwander Sandro
