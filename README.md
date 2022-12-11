@@ -79,3 +79,8 @@ The Entry Team member files the approval mail together with the other documents 
 
 The Entry Team member marks the approved entry in the system as OK. The entry will then automatically be published with the next update. (The update is started manually by a member of the Entry Team or Revision Team once or twice a week.)
 
+The 'As Is' process:
+![TAK-BPMN_Redrafted_is_20221117](https://user-images.githubusercontent.com/102740850/206895665-90c7bd45-595a-49ba-ac82-25e64eec8f7f.png)
+
+## The 'To Be' process: 
+
