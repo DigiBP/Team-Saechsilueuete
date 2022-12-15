@@ -84,14 +84,15 @@ The 'As-Is-Process':
 
 ## The 'To-Be-Process': 
 
-**Documents Received:**
+**Documents Received and Filed:**
 
-LOREM IPSUM
+The original process only provides for the upload of documents. Now, the upload is done via an online form, which already helps with the pre-selection. With this, additional form fields can be requested (e.g. e-mail, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.). In the future, this form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
 
-**File Documents:**
+In the demo version, e-mail, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by a case id and an approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
-LOREM IPSUM
+Process of document uploading and filing/renaming through Make.com:
+<img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
 
 **Review Document Completeness:**
 
-LOREM IPSUM
+In the As-Is-Process, within the check document completeness phase, there are a few checks being done (e.g. the user reads documents, checks what has to be provided and checks for some basic requirements). The team believes that at least a part of that process step could be automated. Since the uploaded documents correspond to a certain recurring structure (form as well as content, e.g. for comparable substances and animals), a document similarity comparison could be used to decide whether the uploaded documents match the information provided. For the demo, we made use of the statistical measure “term frequency-inverse document frequency“ (TF-IDF). TF-IDF was invented for document search and can be used to deliver results that are most relevant to e.g. a search enquiry. The “term frequency” is, what the name says, a count of the number of appearances of a specific term, while the “inverse document frequency” measures how common or rare a word is across a set of documents. The output of TF-IDF is a score between 0 and 1, where 1 means a complete match with the compared document(s) and 0 means no match at all. This algorithm could be used to compare the uploaded document to multiple documents of the same category, e.g. the same active component for the same animal(s). Thresholds could be implemented, where cases below a certain score could be transferred to an exception and thus be checked manually. On the other side, cases above a certain threshold could again be transferred to an exceptional sub-process, as possible duplicates of existing entries might apply. In our demo, we compare the uploaded document with a baseline document that only contains the pre-defined structure (titles). The threshold as based on experiences is set to a score of 0.6. If the uploaded document’s TF-IDF score is below, the document needs to be checked by a user (user task). This document completeness check was implemented using an external task worker running a python script. This would make it relatively easy to extend for further reviews or to extend the document check to other documents.
