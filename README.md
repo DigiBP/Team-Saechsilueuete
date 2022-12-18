@@ -93,7 +93,7 @@ In the demo version, e-mail address of the requester, Swissmedic ID, case type a
 
 For security reasons, so that bad actors do not use the process to spam e-mails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the e-mail address would be mmanually entered in the form.
 
-![image](https://user-images.githubusercontent.com/8128472/208304224-301ef8da-149e-4dad-b0cb-d1a6cb318894.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208304224-301ef8da-149e-4dad-b0cb-d1a6cb318894.png">
 
 Once the for is submitted, the data will apear in the central data base (google sheet in the demo case):
 ![image](https://user-images.githubusercontent.com/8128472/208304197-cb752c1f-fa23-4ace-877a-121acf000c5d.png)
