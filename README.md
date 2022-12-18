@@ -145,31 +145,31 @@ In our demo, we compare the uploaded document with a baseline document that only
 
 **Create or update date entry:**
 
-Because of the previous step automation we decided to keep a four eye principle and kept the publishing of the data entry as a user task. In this step an Entry Team member would ensure a four eye principle and catch majority of mistakes or inconsistencies form the automated steps. 
+Because of the previous step automation we decided to keep a four-eyes principle and kept the publishing of the data entry as a user task. In this step an Entry Team member would ensure the four-eyes principle and catch the majority of mistakes or inconsistencies from the automated steps. To show that this task is assigned to the Entry Team the variable "entry_team" was entered under candidate group in Camunda.
 In a productive environment, the entry team member would enter the received drug information in the Paradox 4.5 system which would then be reviewed and published after the final approval in the last steps of the process.
 
-For the demo set-up we used a google sites service and created a dummy website where we manually embed the received drug information and mark the page as Not approved.
+For the demo set-up we used a google sites service and created a dummy website where we manually embed the received drug information and mark the page as "Not approved".
 ![image](https://user-images.githubusercontent.com/8128472/208302688-505be29b-f922-4bc3-b62d-8f4816e38a7e.png)
 
-Once the inforation is anually published to the page, the entry team member can finish the task in Camunda and provide the published information link which will be further used for the approval request.
+Once the information is published to the page, the Entry Team member can finish the task in Camunda and provide the published information link which will be further used in the process.
 
 **INSERT A SCREENSHOT OF THE STEP BEING PERFORMED IN CAMUNDA**
 
 **Review data entry:**
 
+**Revise data entry:**
 
+If the data entry is not correct, a member of the Entry Team takes over this user task and makes the required correction. The worker is provided with the necessary information in the Form fields of Camunda and adds the information if major changes were required. The last information determines whether the process goes back to be reviewed again or continues.
 
 **Request approval:**
 
-Once the data entry is sucessfully reviewed by the Review Team member in Camunda, the system will autoamtically trigger an email approval request. The email will be sent to the original requestor and the email will have a link to the published inforamtion and a pre-fille approval form. The process is being handeled in Make:
+Once the entry is created or updated and the four-eyes principle is satisfied the system autoamtically triggers an email approval request to the authorization holder. The email is sent to the original requestor and contains one link to the published information and another link to a pre-filled approval form. The process is triggered via http-connector from Camunda to a custom webhook in Make.
 
 ![image](https://user-images.githubusercontent.com/8128472/208302958-e93430f4-760d-4b03-ab02-e3cddf0e80be.png)
 
-**BERENICE, COULD YOU PLEASE EXPLAIN THE WEBHOOK PART**
-
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303149-8cf06d61-dd2d-4668-8333-5d5b2fe122e5.png">
 
-Once the Make receives a trigger from Camunda, it will automatically generate and send an email using the information provided previously thoughout the process (swissmedic_id, VDC_link, approval_form)
+The email is then automatically generated and sent using the information provided previously thoughout the process (swissmedic_id, VDC_link, approval_form)
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303223-6737a1bf-7e42-4dba-b6d0-09fa0733ffe0.png">
 
