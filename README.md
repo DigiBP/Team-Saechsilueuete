@@ -97,16 +97,14 @@ The first step in the Make **Document received** sequence is a watch rows step..
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png">
 
-![Watch Rows](https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png)
-
 The second step is to generate a unique case_id which will be carried accross the process and used to identify the business process instances. The generated case_id later will be sent to the Camunda instance and used as a Business Key there. 
 For the sake of the demo the case_id is a simple randomly generated number. It is calculated by taking a randomly generated number, muliplied by the mathematical constant pi then multiplied by 10000 to make the number at least 5 digits long and of course multiplied by the answer to the ultimate question of life, the universe and everything (42). The generated number is rounded to a natural number for consistency. The generated case_id has a slight chance to not be unique, but foir the sake of a demo it is suficient. In a productive environment several different options could be diiscussed with different used cases. A running number could be used as a counter of submitted cases, a running number per holder of authorisation could help identify the requestor etc. 
 
-![Generate case_id](https://user-images.githubusercontent.com/8128472/208289058-11b4ed6a-f82c-4ab7-a17d-568dd84957fa.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208289058-11b4ed6a-f82c-4ab7-a17d-568dd84957fa.png">
 
 The next step in Make is to use the submitted swissmedic_id and the generated case_id and create an approval form link with prefilled details. Technically the person could add the details themselves, but a prefilled form significantly cuts on the human mistakes, thus the process is less likely to get stuck. 
 
-![image](https://user-images.githubusercontent.com/8128472/208289466-661cd137-ace0-43cb-ba92-31960ed7cd79.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208289466-661cd137-ace0-43cb-ba92-31960ed7cd79.png">
 
 Once the form along with the required document is submitted, Make automatically renames the documents to the required format and stores it in the google drive. 
 
@@ -114,11 +112,11 @@ Once the form along with the required document is submitted, Make automatically 
 
 Once the previous steps are finalised, the Make sequence appends all the generated details into the same google sheet database for further usage.
 
-![image](https://user-images.githubusercontent.com/8128472/208289628-1c2aecd1-0764-4633-885c-dcadfe9774c5.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208289628-1c2aecd1-0764-4633-885c-dcadfe9774c5.png">
 
 As a last step of this Make sequence is sending all of the information back to Caunda for the process to run further.
 
-![image](https://user-images.githubusercontent.com/8128472/208289746-4c865bfd-d017-45ae-8346-ecb3454afd9d.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208289746-4c865bfd-d017-45ae-8346-ecb3454afd9d.png">
 
 **Review Document Completeness:**
 
