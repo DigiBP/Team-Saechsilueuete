@@ -95,6 +95,7 @@ Process of document uploading and filing/renaming through Make.com:
 
 The first step in the Make **Document received** sequence is a watch rows step.. In the demo the step will be activated manually, but if the process would be deployed in a productive environment it would make most sense to activate a periodic review. Based on the discussion with the process expert Berenice, a period of every couple of hours should be more than enough. It is not time critical to review the files imediately as the information is received.
 
+<img width="500" src="https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png">
 ![Watch Rows](https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png)
 
 The second step is to generate a unique case_id which will be carried accross the process and used to identify the business process instances. The generated case_id later will be sent to the Camunda instance and used as a Business Key there. 
