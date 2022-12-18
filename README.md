@@ -174,6 +174,25 @@ The approval form link will already pre-fill all of the information, the approve
 
 **Response received:**
 
+Once the approval form is filled the information will appear in the Approval sheet in the master database.
+
+![image](https://user-images.githubusercontent.com/8128472/208303856-966f691c-3220-4d50-b936-757b4477ffe7.png)
+
+Same as in the original Document Submission For case, Make will be looking for new data entries and kick off the further steps to send the information back to Camunda with all the required information:
+
+* BusinessKey
+* approved or rejected key
+* Additional information in case of rejection
+* case_id
+* swissmedic_id
+
+![image](https://user-images.githubusercontent.com/8128472/208303906-750cd96d-e301-48dc-9479-3cc704491990.png)
+
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208303919-aa13ca86-40d1-46ad-b521-6b4e45840f68.png">
+
+![image](https://user-images.githubusercontent.com/8128472/208303961-65c7c27e-be64-4cb3-ad35-ca2839ddbfe9.png)
+
+![image](https://user-images.githubusercontent.com/8128472/208304005-bbdb06cf-714e-4942-80a2-87b888b98bec.png)
 
 
 **Publish entry:**
