@@ -135,3 +135,19 @@ By using a message from Make we send several variables used by the oither steps 
 In the As-Is-Process, within the check document completeness phase, there are a few checks being done (e.g. the user reads documents, checks what has to be provided and checks for some basic requirements). The team believes that at least a part of that process step could be automated. Since the uploaded documents correspond to a certain recurring structure (form as well as content, e.g. for comparable substances and animals), a document similarity comparison could be used to decide whether the uploaded documents match the information provided. For the demo, we made use of the statistical measure “term frequency-inverse document frequency“ (TF-IDF). TF-IDF was invented for document search and can be used to deliver results that are most relevant to e.g. a search enquiry. The “term frequency” is, what the name says, a count of the number of appearances of a specific term, while the “inverse document frequency” measures how common or rare a word is across a set of documents. The output of TF-IDF is a score between 0 and 1, where 1 means a complete match with the compared document(s) and 0 means no match at all. This algorithm could be used to compare the uploaded document to multiple documents of the same category, e.g. the same active component for the same animal(s). Thresholds could be implemented, where cases below a certain score could be transferred to an exception and thus be checked manually. On the other side, cases above a certain threshold could again be transferred to an exceptional sub-process, as possible duplicates of existing entries might apply. 
 
 In our demo, we compare the uploaded document with a baseline document that only contains the pre-defined structure (titles). The threshold as based on experiences is set to a score of 0.6. If the uploaded document’s TF-IDF score is below, the document needs to be checked by a user (user task). This document completeness check was implemented using an external task worker running a python script. This would make it relatively easy to extend for further reviews or to extend the document check to other documents. To simplify matters, the code for document verification is executed locally. In a real implementation, of course, a cloud instance or a company server would also be used for this purpose (the source code is provided on this github repo).
+
+**Create or update date entry:**
+
+Because of the previous step automation we decided to keep a four eye principle and kept the publishing of the data entry as a user task. In this step an Entry Team member would ensure a four eye principle and catch majority of mistakes or inconsistencies form the automated steps. 
+In a productive environment, the entry team member would enter the received drug information in the Paradox 4.5 system which would then be reviewed and published after the final approval in the last steps of the process.
+
+For the demo set-up we used a google sites service and created a dummy website where we manually embed the received drug information and mark the page as Not approved.
+![image](https://user-images.githubusercontent.com/8128472/208302688-505be29b-f922-4bc3-b62d-8f4816e38a7e.png)
+
+Once the inforation is anually published to the page, the entry team member can finish the task in Camunda and provide the published information link which will be further used for the approval request.
+
+**INSERT A SCREENSHOT OF THE STEP BEING PERFORMED IN CAMUNDA**
+
+**Review data entry:**
+
+
