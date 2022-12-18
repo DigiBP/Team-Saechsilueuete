@@ -83,6 +83,7 @@ The 'As-Is-Process':
 ![TAK-BPMN_Redrafted_is_20221117](https://user-images.githubusercontent.com/102740850/206895665-90c7bd45-595a-49ba-ac82-25e64eec8f7f.png)
 
 ## The 'To-Be-Process': 
+![image](https://user-images.githubusercontent.com/8128472/208300798-1371d125-2083-4f52-9e9c-f679538d3e20.png)
 
 **Documents Received and Filed:**
 
