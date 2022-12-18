@@ -92,7 +92,7 @@ In the demo version, e-mail address of the requester, Swissmedic ID, case type a
 
 For security reasons, so that bad actors do not use the process to spam e-mails we forced the Document Suibmission Form to request a Google mail log-in.
 
-https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform
+<a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Suibmission Form</a>
 
 Process of document uploading and filing/renaming through Make.com:
 <img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
