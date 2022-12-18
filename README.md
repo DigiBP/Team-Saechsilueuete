@@ -155,6 +155,7 @@ Once the inforation is anually published to the page, the entry team member can 
 **Request approval:**
 
 Once the data entry is sucessfully reviewed by the Review Team member in Camunda, the system will autoamtically trigger an e-mail approval request. The e-mail will be sent to the original requestor and the e-mail will have a link to the published inforamtion and a pre-fille approval form. The process is being handeled in Make:
+
 ![image](https://user-images.githubusercontent.com/8128472/208302958-e93430f4-760d-4b03-ab02-e3cddf0e80be.png)
 
 **BERENICE, COULD YOU PLEASE EXPLAIN THE WEBHOOK PART**
