@@ -151,3 +151,24 @@ Once the inforation is anually published to the page, the entry team member can 
 **Review data entry:**
 
 
+
+**Request approval:**
+
+Once the data entry is sucessfully reviewed by the Review Team member in Camunda, the system will autoamtically trigger an e-mail approval request. The e-mail will be sent to the original requestor and the e-mail will have a link to the published inforamtion and a pre-fille approval form. The process is being handeled in Make:
+![image](https://user-images.githubusercontent.com/8128472/208302958-e93430f4-760d-4b03-ab02-e3cddf0e80be.png)
+
+**BERENICE, COULD YOU PLEASE EXPLAIN THE WEBHOOK PART**
+
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208303149-8cf06d61-dd2d-4668-8333-5d5b2fe122e5.png">
+
+Once the Make receives a trigger from Camunda, it will automatically generate and send an e-mail using the information provided previously thoughout the process (swissmedic_id, VDC_link, approval_form)
+
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208303223-6737a1bf-7e42-4dba-b6d0-09fa0733ffe0.png">
+
+
+**Response received:**
+
+
+
+**Publish entry:**
+
