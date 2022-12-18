@@ -90,6 +90,10 @@ The original process only provides for the upload of documents. Now, the upload 
 
 In the demo version, e-mail address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
+For security reasons, so that bad actors do not use the process to spam e-mails we forced the Document Suibmission Form to request a Google mail log-in.
+
+https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform
+
 Process of document uploading and filing/renaming through Make.com:
 <img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
 
@@ -108,13 +112,22 @@ The next step in Make is to use the submitted swissmedic_id and the generated ca
 
 Once the form along with the required document is submitted, Make automatically renames the documents to the required format and stores it in the google drive. 
 
-**ONCE THE FILE NAME IS AGREED, WILL UPLOAD A PICTURE**
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208298797-5a09d638-ffe7-450f-bd5a-01343cac63bc.png">
 
 Once the previous steps are finalised, the Make sequence appends all the generated details into the same google sheet database for further usage.
+The format of the renamed file is as follows: "CaseID_" + the generated case_id + "-SwissMedicID_" + swissmedic_id.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289628-1c2aecd1-0764-4633-885c-dcadfe9774c5.png">
 
 As a last step of this Make sequence is sending all of the information back to Caunda for the process to run further.
+In this step we set the Camunda businessKey to match the case_id nummber so that the process can be tracked across the process steps and different make scenarios.
+By using a message from Make we send several variables used by the oither steps in the process to Camunda. The following information is send as strings:
+* timestamp - the tie stamp value of the submission
+* doc_url - the google doc location of the submitted file
+* email - the e-mail of the submitter
+* swissmedic_id - the official Swissmedic ID of the drug
+* case_type - if it is a new request or change request (for the demo version we did not explore the usage any further)
+* approval_form - a generated approval form link with the prefilled information.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289746-4c865bfd-d017-45ae-8346-ecb3454afd9d.png">
 
