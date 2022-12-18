@@ -90,7 +90,7 @@ The original process only provides for the upload of documents. Now, the upload 
 
 In the demo version, e-mail address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
-For security reasons, so that bad actors do not use the process to spam e-mails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Suibmission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the e-mail address would be mmanually entered in the form.
+For security reasons, so that bad actors do not use the process to spam e-mails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the e-mail address would be mmanually entered in the form.
 
 Process of document uploading and filing/renaming through Make.com:
 <img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
