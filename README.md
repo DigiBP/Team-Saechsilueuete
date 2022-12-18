@@ -16,17 +16,23 @@ Schwander Sandro
 
 
 ## Background
-The Veterinary Drug Compendium is published by the CliniPharm Team at the Institute for Veterinary Pharmacology and Toxicology, Vetsuisse Faculty, University of Zurich. Every veterinary drug marketed in Switzerland needs its official information published online (according to law). Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service, while Refdata currently has given the contract for this publication to the above mentioned Institute.
+For every veterinary drug marketed in Switzerland each Swissmedic approved drug information must be published online, according to law. Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service, while Refdata currently has given the contract for this publication to the Institute for Veterinary Pharmacology and Toxicology at the University of Zurich. There the Veterinary Drug Compendium (VDC) is published by the CliniPharm Team. Whenever a new drug comes to market, leaves the market, or the approved information of an existing drug is changed, the respective entry of this drug in the VDC has to be created, deleted or changed. For these purposes the CliniPharm Team receives new documents from authorization holders on a regular basis. The CliniPharm personel is split into the Entry Team whose members create, change or delete entries in the VDC, and the Review Team who ensure quality by reviewing the Entry Team's work.
+
+## The 'As-Is-Process':
+![VDC_as-is_20221218](https://user-images.githubusercontent.com/115710100/208304796-c8482ae9-cb6f-4f60-ac74-11744d09a648.png)
+
+PREVIOUS:\
+![TAK-BPMN_Redrafted_is_20221117](https://user-images.githubusercontent.com/102740850/206895665-90c7bd45-595a-49ba-ac82-25e64eec8f7f.png)
 
 ## Description of the Workflow-Steps in the As-Is-Process
 
 **Documents Received:**
 
-The process starts when an authorisation holder uploads files to the dedicated Dropbox. The current system sends a mail to the Entry Team’s inbox reporting uploaded documents every two hours during working hours.
+The process starts when an authorization holder uploads documents to the dedicated file hosting service. The current system sends an email to the Entry Team’s inbox reporting uploaded documents every two hours during working hours.
 
 **File Documents:**
 
-In this step, an Entry Team member moves the received documents from the folder of the dedicated Dropbox to local filing. Locally all the documents belonging to one entry are stored in a folder with the following naming convention: “Swissmedic number”_”name of the drug”_”date of receipt”
+In this step, an Entry Team member moves the received documents from the folder of the dedicated file hosting service to local filing. Locally all the documents belonging to one process are stored in one folder. These folders are named by convention to enable retrieval of information for specific amendments in the VDC.
 
 **Review Document Completeness:**
 
@@ -34,20 +40,20 @@ Next, the filed documents are checked for completeness. The Entry Team member lo
 
 **Request missing documents or information:**
 
-If documents or information are incomplete, an Entry Team member sends a mail to the contact at the authorisation holder, requesting the missing documents or information.
+If documents or information are incomplete, an Entry Team member sends an email to the contact at the authorization holder, requesting the missing documents or information.
 
 **Create or update data entry:**
 
-For a new data entry, the Entry Team member creates a new entry in the database program (Paradox 4.5), labeling it with the unique Swissmedic-Number of the drug. Then firstly, the complete German version of the specialist information on the drug (called Fachinformation (FI)) is copied into the required fields. Secondly, the link(s) to the information page(s) about the active substance(s) of the drug is/are created. (These information pages are a separate service also provided by the CliniPharm team.) Thirdly, the species and route of application of the drug are entered into the system, and also – where this applies - the dosage of the drug per kg bodyweight. Fourthly, the duration of the withdrawal periods is entered into the system for drugs that are given to livestock. As the last step, PDF files of the specialist information and package leaflet are copied to the dedicated folder and renamed according to the internal convention (so they are linked to the published entry).
+For a new data entry, the Entry Team member creates a new entry in the database program (Paradox 4.5), labeling it with the unique Swissmedic-Number of the drug. Then firstly, the complete German version of the specialist information on the drug (called Fachinformation (FI)) is copied into the required fields. Secondly, the link(s) to the information page(s) about the active substance(s) of the drug is/are created. (These information pages are a separate service also provided by the CliniPharm team.) Thirdly, the species and route of application of the drug are entered into the system, and also – where this applies - the dosage of the drug per kilogram bodyweight. Fourthly, the duration of the withdrawal periods is entered into the system for drugs that are given to livestock. As the last step, PDF files of the specialist information and package leaflet are copied to the dedicated folder and renamed according to the internal convention (so they are linked to the published entry).
 For changing an existing data entry, the necessary changes are done in the above-mentioned sections.
 
 **Send Review Request:**
 
-A mail is sent to a Review Team member asking for double-checking the created/revised entry.
+An email is sent to a Review Team member asking for the review of the created/revised entry.
 
 **Review Data Entry:**
 
-The Review Team member checks the documents and the entry per a dual control principle.
+The Review Team member checks the documents and the entry per a four-eye principle.
 
 **Send feedback:**
 
@@ -55,43 +61,38 @@ Then the Review Team member emails their reply.
 
 **Review feedback:**
 
-The Entry Team member reads the mail and decides on the next step.
-In case of non-minor changes needed to the entry or missing documents, the process goes back to “Create or update data entry” or “Request missing documents or information”.
-In case of only minor changes:
+The Entry Team member reads the reply and proceeds accordingly.
 
 **Revise data entry:**
 
-The Entry Team member adds the requested small change(s) to the entry.
+The Entry Team member adds the requested change(s) to the entry.
 
 **Request approval:**
 
-The Entry Team member sends an email to the contact at the authorization holder containing a link to the entry and asking for approval.
+The Entry Team member sends an email to the contact at the authorization holder containing a link to the entry and asking for approval via email.
 
-**Approved / Not Approved:**
+**Review response:**
 
-Depending on the answering mail of the authorization holder, the process continues or goes back to “Review feedback”.
+The Entry Team member reads the response of the authorization holder and proceeds accordingly.
 
 **File documents:**
 
-The Entry Team member files the approval mail together with the other documents in the folder mentioned above. This folder is then moved into the local archive folder.
+The Entry Team member files the approval email together with the other documents in the folder mentioned above. This folder is then moved into the local archive folder.
 
 **Publish entry:**
 
-The Entry Team member marks the approved entry in the system as OK. The entry will then automatically be published with the next update. (The update is started manually by a member of the Entry Team or Revision Team once or twice a week.)
-
-The 'As-Is-Process':
-![TAK-BPMN_Redrafted_is_20221117](https://user-images.githubusercontent.com/102740850/206895665-90c7bd45-595a-49ba-ac82-25e64eec8f7f.png)
+The Entry Team member marks the approved entry in the system as OK. The entry will then automatically be published with the next update. (VDC updates are started manually by a member of the Entry Team or Revision Team once or twice a week.)
 
 ## The 'To-Be-Process': 
 ![image](https://user-images.githubusercontent.com/8128472/208300798-1371d125-2083-4f52-9e9c-f679538d3e20.png)
 
 **Documents Received and Filed:**
 
-The original process only provides for the upload of documents. Now, the upload is done via an online form, which already helps with the pre-selection. With this, additional form fields can be requested (e.g. e-mail, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.). In the future, this form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
+The original process only provides for the upload of documents. Now, the upload is done via an online form, which already helps with the pre-selection. With this, additional form fields can be requested (e.g. email, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.). In the future, this form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
 
-In the demo version, e-mail address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
+In the demo version, email address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
-For security reasons, so that bad actors do not use the process to spam e-mails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the e-mail address would be mmanually entered in the form.
+For security reasons, so that bad actors do not use the process to spam emails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the email address would be mmanually entered in the form.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208304224-301ef8da-149e-4dad-b0cb-d1a6cb318894.png">
 
@@ -107,7 +108,7 @@ The first step in the Make **Document received** sequence is a watch rows step..
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png">
 
 The second step is to generate a unique case_id which will be carried accross the process and used to identify the business process instances. The generated case_id later will be sent to the Camunda instance and used as a Business Key there. 
-For the sake of the demo the case_id is a simple randomly generated number. It is calculated by taking a randomly generated number, muliplied by the mathematical constant pi then multiplied by 10000 to make the number at least 5 digits long and of course multiplied by the answer to the ultimate question of life, the universe and everything (42). The generated number is rounded to a natural number for consistency. The generated case_id has a slight chance to not be unique, but for the sake of a demo it is suficient. In a productive environment several different options could be diiscussed with different used cases. A running number could be used as a counter of submitted cases, a running number per holder of authorisation could help identify the requestor etc. 
+For the sake of the demo the case_id is a simple randomly generated number. It is calculated by taking a randomly generated number, muliplied by the mathematical constant pi then multiplied by 10000 to make the number at least 5 digits long and of course multiplied by the answer to the ultimate question of life, the universe and everything (42). The generated number is rounded to a natural number for consistency. The generated case_id has a slight chance to not be unique, but for the sake of a demo it is suficient. In a productive environment several different options could be diiscussed with different used cases. A running number could be used as a counter of submitted cases, a running number per holder of authorization could help identify the requestor etc. 
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289058-11b4ed6a-f82c-4ab7-a17d-568dd84957fa.png">
 
@@ -129,7 +130,7 @@ In this step we set the Camunda businessKey to match the case_id nummber so that
 By using a message from Make we send several variables used by the oither steps in the process to Camunda. The following information is send as strings:
 * timestamp - the tie stamp value of the submission
 * doc_url - the google doc location of the submitted file
-* email - the e-mail of the submitter
+* email - the email of the submitter
 * swissmedic_id - the official Swissmedic ID of the drug
 * case_type - if it is a new request or change request (for the demo version we did not explore the usage any further)
 * approval_form - a generated approval form link with the prefilled information.
@@ -160,7 +161,7 @@ Once the inforation is anually published to the page, the entry team member can 
 
 **Request approval:**
 
-Once the data entry is sucessfully reviewed by the Review Team member in Camunda, the system will autoamtically trigger an e-mail approval request. The e-mail will be sent to the original requestor and the e-mail will have a link to the published inforamtion and a pre-fille approval form. The process is being handeled in Make:
+Once the data entry is sucessfully reviewed by the Review Team member in Camunda, the system will autoamtically trigger an email approval request. The email will be sent to the original requestor and the email will have a link to the published inforamtion and a pre-fille approval form. The process is being handeled in Make:
 
 ![image](https://user-images.githubusercontent.com/8128472/208302958-e93430f4-760d-4b03-ab02-e3cddf0e80be.png)
 
@@ -168,13 +169,13 @@ Once the data entry is sucessfully reviewed by the Review Team member in Camunda
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303149-8cf06d61-dd2d-4668-8333-5d5b2fe122e5.png">
 
-Once the Make receives a trigger from Camunda, it will automatically generate and send an e-mail using the information provided previously thoughout the process (swissmedic_id, VDC_link, approval_form)
+Once the Make receives a trigger from Camunda, it will automatically generate and send an email using the information provided previously thoughout the process (swissmedic_id, VDC_link, approval_form)
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303223-6737a1bf-7e42-4dba-b6d0-09fa0733ffe0.png">
 
-**INSERT A REAL E-MAIL RECEIVED DURING THE PROCESS RECORDING**
+**INSERT A REAL EMAIL RECEIVED DURING THE PROCESS RECORDING**
 
-The approval form link will already pre-fill all of the information, the approver will only have to enter their e-mail and Approve or Reject the request. In the case of rejection, the form has a field where additional information can be eneterd.
+The approval form link will already pre-fill all of the information, the approver will only have to enter their email and Approve or Reject the request. In the case of rejection, the form has a field where additional information can be eneterd.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303722-ca927927-b638-4786-ad21-6796aec6f6d1.png">
 
