@@ -190,9 +190,8 @@ Same as in the original Document Submission For case, Make will be looking for n
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303919-aa13ca86-40d1-46ad-b521-6b4e45840f68.png">
 
-![image](https://user-images.githubusercontent.com/8128472/208303961-65c7c27e-be64-4cb3-ad35-ca2839ddbfe9.png)
 
-![image](https://user-images.githubusercontent.com/8128472/208304005-bbdb06cf-714e-4942-80a2-87b888b98bec.png)
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208303961-65c7c27e-be64-4cb3-ad35-ca2839ddbfe9.png">
 
 
 **Publish entry:**
