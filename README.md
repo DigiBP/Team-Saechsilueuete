@@ -166,6 +166,11 @@ Once the Make receives a trigger from Camunda, it will automatically generate an
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303223-6737a1bf-7e42-4dba-b6d0-09fa0733ffe0.png">
 
+**INSERT A REAL E-MAIL RECEIVED DURING THE PROCESS RECORDING**
+
+The approval form link will already pre-fill all of the information, the approver will only have to enter their e-mail and Approve or Reject the request. In the case of rejection, the form has a field where additional information can be eneterd.
+
+<img width="250" src="https://user-images.githubusercontent.com/8128472/208303722-ca927927-b638-4786-ad21-6796aec6f6d1.png">
 
 **Response received:**
 
