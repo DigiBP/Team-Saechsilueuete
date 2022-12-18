@@ -63,7 +63,7 @@ In case of only minor changes:
 
 The Entry Team member adds the requested small change(s) to the entry.
 
-Request approval:
+**Request approval:**
 
 The Entry Team member sends an email to the contact at the authorization holder containing a link to the entry and asking for approval.
 
@@ -88,10 +88,20 @@ The 'As-Is-Process':
 
 The original process only provides for the upload of documents. Now, the upload is done via an online form, which already helps with the pre-selection. With this, additional form fields can be requested (e.g. e-mail, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.). In the future, this form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
 
-In the demo version, e-mail, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by a case id and an approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
+In the demo version, e-mail address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
 Process of document uploading and filing/renaming through Make.com:
 <img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
+
+The first step in the Make **Document received** sequence is a watch rows step.. In the demo the step will be activated manually, but if the process would be deployed in a productive environment it would make most sense to activate a periodic review. Based on the discussion with the process expert Berenice, a period of every couple of hours should be more than enough. It is not time critical to review the files imediately as the information is received.
+
+![Watch Rows](https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png)
+
+The second step is to generate a unique case_id which will be carried accross the process and used to identify the business process instances. The generated case_id later will be sent to the Camunda instance and used as a Business Key there. 
+For the sake of the demo the case_id is a simple randomly generated number. It is calculated by taking a randomly generated number, muliplied by the mathematical constant pi then multiplied by 10000 to make the number at least 5 digits long and of course multiplied by the answer to the ultimate question of life, the universe and everything (42). The generated number is rounded to a natural number for consistency. The generated case_id has a slight chance to not be unique, but foir the sake of a demo it is suficient. In a productive environment several different options could be diiscussed with different used cases. A running number could be used as a counter of submitted cases, a running number per holder of authorisation could help identify the requestor etc. 
+
+![Generate case_id](https://user-images.githubusercontent.com/8128472/208289058-11b4ed6a-f82c-4ab7-a17d-568dd84957fa.png)
+
 
 **Review Document Completeness:**
 
