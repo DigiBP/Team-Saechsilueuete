@@ -88,22 +88,24 @@ The Entry Team member marks the approved entry in the system as OK. The entry wi
 
 **Documents Received and Filed:**
 
-The original process only provides for the upload of documents. Now, the upload is done via an online form, which already helps with the pre-selection. With this, additional form fields can be requested (e.g. email, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.). In the future, this form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
+The original process only provides for the upload of documents. Now, the upload is done via an online form where additional information can be requested (e.g. email, case type, affected animals, active ingredient, Swissmedic ID of the drug, etc.), which already helps with the pre-selection. In the future the form could be managed via an online portal. This would allow the partners to initiate a new case via personal login credentials, track the current status and even secure communication (if needed) could be ensured. 
 
-In the demo version, email address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an autoamtically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
+In the demo version, email address of the requester, Swissmedic ID, case type and the upload of the Approved Drug Information document (docx) are provided via a Google Forms Form. Then, with Make.com, the entries of the Google Sheets linked to the form are watched and as soon as a new entry (row) appears, the information is extracted, enriched by an automatically generated unique case id and a pre-generated approval_url. The Google Sheets provided by/linked to the Google Forms acts in this case as a simple form of database. The second process step is also automatized via Make.com. After, the entries are transferred to Camunda, where a new case is opened.
 
-For security reasons, so that bad actors do not use the process to spam emails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. In the productive environment, the form would be opened up and the email address would be mmanually entered in the form.
+For security reasons, so that bad actors do not use the process to spam emails we forced the <a href=https://docs.google.com/forms/d/e/1FAIpQLSc4paGeoj6DRHrGdoJBFstS9N8GzVEoykw593UdGz7M0UPcqw/viewform>Document Submission Form</a> to request a Google mail log-in. Also in the productive environment, the form would only be available after log-in. If the partner wishes to get notified under a personal email insted of a general company mail address they would enter the email address manually in the form.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208304224-301ef8da-149e-4dad-b0cb-d1a6cb318894.png">
 
-Once the for is submitted, the data will apear in the central data base (google sheet in the demo case):
+For demonstration purposes, only one document is submitted in the form and the upload of e.g. other language versions was forgone. In the productive environment, the form would be designed to help the partners upload all the required documents, by determining the required documents through the requested additional information.
+
+Once the form is submitted, the data will apear in the central data base (google sheet in the demo case):
 ![image](https://user-images.githubusercontent.com/8128472/208304197-cb752c1f-fa23-4ace-877a-121acf000c5d.png)
 
 
 Process of document uploading and filing/renaming through Make.com:
 <img width="923" alt="Bildschirmfoto 2022-12-15 um 17 26 23" src="https://user-images.githubusercontent.com/102740850/207914631-bb694711-3f27-4c56-aee7-95f4c2475b4a.png">
 
-The first step in the Make **Document received** sequence is a watch rows step.. In the demo the step will be activated manually, but if the process would be deployed in a productive environment it would make most sense to activate a periodic review. Based on the discussion with the process expert Berenice, a period of every couple of hours should be more than enough. It is not time critical to review the files imediately as the information is received.
+The first step in the Make **Document received** sequence is a watch rows step. In the demo the step will be activated manually, but if the process would be deployed in a productive environment a periodic review every couple of hours would be implemented, similar to the as-is process.
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208289070-25d276a0-c224-41b4-a302-c8847c4d0ae0.png">
 
