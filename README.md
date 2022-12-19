@@ -169,7 +169,8 @@ Once the entry is created or updated and the four-eyes principle is satisfied th
 
 ![image](https://user-images.githubusercontent.com/8128472/208302958-e93430f4-760d-4b03-ab02-e3cddf0e80be.png)
 
-Camunda triggeres this via http-connector to a custom webhook in Make, which includes the communication of the required variables.
+Camunda triggeres this scenario via http-connector to a custom webhook in Make, which includes the communication of the required variables.
+
 <img width="250" src="https://user-images.githubusercontent.com/115710100/208379589-600f8af4-6c51-4f92-9b87-08aadd921a71.png">
 
 <img width="250" src="https://user-images.githubusercontent.com/8128472/208303149-8cf06d61-dd2d-4668-8333-5d5b2fe122e5.png">
