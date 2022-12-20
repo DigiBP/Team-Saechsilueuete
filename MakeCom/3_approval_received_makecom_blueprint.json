@@ -10,7 +10,7 @@
                 "limit": 1,
                 "sheetId": "Approval",
                 "__IMTCONN__": 827438,
-                "spreadsheetId": "/1hbgY8Edeoqn5UjozxV1Q1HQ2JO9hE7pFAdf_xKiyCYQ",
+                "spreadsheetId": "/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
                 "tableFirstRow": "A1:Z1",
                 "includesHeaders": true,
                 "valueRenderOption": "FORMATTED_VALUE",
@@ -295,7 +295,7 @@
             "mapper": {
                 "ca": "",
                 "qs": [],
-                "url": "https://digibp.herokuapp.com/engine-rest/message",
+                "url": "https://xxxxx.herokuapp.com/engine-rest/message",
                 "data": "{\"messageName\" : \"msg_ApprovalReceived\",\n\"businessKey\" : \"{{1.`3`}}\",\n\"processVariables\" : {\n\n\"approval_response\" : {\"value\" : \"{{1.`4`}}\", \"type\": \"String\"},\n\n\"rejection_information\" : {\"value\" : \"{{1.`5`}}\", \"type\" : \"String\"},\n\n\"timestampApproval\" : {\"value\" : \"{{1.`0`}}\", \"type\": \"String\"},\n\n \"case_id\" : {\"value\" : \"{{1.`3`}}\", \"type\": \"String\"},\n\n\"swissmedic_id\" : {\"value\" : \"{{1.`2`}}\", \"type\": \"String\"}\n}\n}",
                 "gzip": true,
                 "method": "post",
