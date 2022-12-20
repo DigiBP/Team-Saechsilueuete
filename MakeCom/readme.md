@@ -20,7 +20,7 @@ This description only is needed, if a Gmail account is used. For a prouctive set
 * Select advanced
 * Add the "Client ID" and "Client Secret" from above
 
-![image](https://user-images.githubusercontent.com/65862109/208741444-95cc102a-95dc-499e-8f12-00fb992a0773.png =x250)
+![image](https://user-images.githubusercontent.com/65862109/208741444-95cc102a-95dc-499e-8f12-00fb992a0773.png)
 
 
 
