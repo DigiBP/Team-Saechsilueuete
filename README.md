@@ -38,9 +38,9 @@ Schwander Sandro
 
 ## Introduction
 
-The task for this project was to as a team digitalize a processes based on an own project idea or a selected pre-defined project case. We chose an own project idea.
+The task for this project was as a team to digitalize a process based on an own project idea or a selected pre-defined project case. Our team chose an own project idea.
 
-The following deliverables are mandatory:
+The following deliverables were mandatory:
 * Link to GitHub repositories containing:
   * Modelling artefacts (such as BPMN, DMN, CMMN, etc.) and, if required, other project artefacts (such as configuration files, source code, etc.)
   * Documentation about project and processes (as GitHub markdown files (e.g., Readme and interlinked .md files)).
