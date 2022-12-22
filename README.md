@@ -246,6 +246,6 @@ Same as in the Make scenario before the start event, Make is looking for new dat
 
 ### Publish entry:
 
-The final step of the process, is a simple user task, where the user access the website and removes the ribbon saying "Not Approved". This indicated to the end users that the document is approved. 
+The final step of the process, is a simple user task, where a member of the Entry Team accesses the website and removes the ribbon saying "Not Approved". This indicated to the end users that the entry was approved. 
 
 ![publish entry](https://user-images.githubusercontent.com/106996493/208474404-b3ec1f90-8c59-4ca2-8216-4e8c1cb3ce2f.png)
