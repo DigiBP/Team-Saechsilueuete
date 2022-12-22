@@ -8,9 +8,33 @@ Santome Bragado Ruben\
 Schwander Sandro
 
 ## Table of Contents
-
-
-
+1. [Introduction](introduction)
+2. [Background](background)
+3. [The As-Is-Process](#the-as-is-process)
+    1. [Documents received:](#documents-received)    
+    2. [File documents:](#file-documents)    
+    3. [Review document completeness:](#review-document-completeness)    
+    4. [Request missing documents or information:](#request-missing-documents-or-information)    
+    5. [Create or update data entry:](#create-or-update-data-entry)
+    6. [Send review request:](#send-review-request)
+    7. [Review data entry:](#review-data-entry)
+    8. [Send feedback:](#send-feedback)
+    9. [Review feedback:](#review-feedback)
+   10. [Revise data entry:](#revise-data-entry)
+   11. [Request approval:](#request-approval)
+   12. [Review response:](#review-response)
+   13. [File documents:](#file-documents)
+   14. [Publish entry:](#publish-entry)
+4. [The To-Be-Process](#the-to-be-process)
+   1. [Documents received and filed:](#documents-received-and-filed)
+   2. [Review document completeness:](#review-document-completeness)
+   3. [Review exception:](#review-exception)
+   4. [Create or update date entry:](#create-or-update-date-entry)
+   5. [Review data entry:](#review-data-entry)
+   6. [Revise data entry:](#revise-data-entry)
+   7. [Request approval:](#request-approval)
+   8. [Response received:](#response-received)
+   9. [Publish entry:](#publish-entry)
 
 ## Introduction
 
@@ -32,11 +56,11 @@ For every veterinary drug marketed in Switzerland each Swissmedic approved drug 
 
 ## Description of the Workflow-Steps
 
-### Documents Received:
+### Documents received:
 
 The process starts when an authorization holder uploads documents to the dedicated file hosting service. The current system sends an email to the Entry Team’s inbox reporting uploaded documents every two hours during working hours.
 
-### File Documents:
+### File documents:
 
 In this step, an Entry Team member moves the received documents from the folder of the dedicated file hosting service to local filing. Locally all the documents belonging to one process are stored in one folder. These folders are named by convention to enable retrieval of information for specific amendments in the VDC.
 
@@ -89,10 +113,8 @@ The Entry Team member files the approval email together with the other documents
 
 The Entry Team member marks the approved entry in the system as OK. The entry will then automatically be published with the next update. (VDC updates are started manually by a member of the Entry Team or Revision Team once or twice a week.)
 
-## The 'To-Be-Process': 
+## The To-Be-Process 
 ![image](https://user-images.githubusercontent.com/8128472/208300798-1371d125-2083-4f52-9e9c-f679538d3e20.png)
-
-## Description of the Workflow-Steps
 
 ### Documents Received and Filed:
 
@@ -152,7 +174,7 @@ In the As-Is-Process, within the check document completeness phase, there are a 
 
 In our demo, we compare the uploaded document with a baseline document that only contains the pre-defined structure (titles). The threshold as based on experiences is set to a score of 0.6. This document completeness check was implemented using an external task worker running a python script. This would make it relatively easy to extend for further reviews or to extend the document check to other documents. To simplify matters, the code for document verification is executed locally. In a real implementation, of course, a cloud instance or a company server would be used for this purpose (the source code is provided on this github repo (https://github.com/DigiBP/Team-Saechsilueuete/tree/main/External%20Worker).
 
-### Review exception
+### Review exception:
 
 If the uploaded document’s TF-IDF score is below 0.6, the document needs to be checked by a member of the Entry Team (user task). There might be cases where the structure does not fit the baseline but is still in order. Then the exception is accepted and the next task in the process is triggered through Camunda. If the submitted document is truly not correct the exception is rejected, the Entry Team member contacts the customer and the process ends. 
 
