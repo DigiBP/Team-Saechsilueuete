@@ -18,9 +18,11 @@ A team must digitalise processes based on an own project idea or a selected pre-
 
 The following deliverables are mandatory:
 * Link to GitHub repositories containing:
-* Modelling artefacts (such as BPMN, DMN, CMMN, etc.) and, if required, other project artefacts (such as configuration files, source code, etc.)
-* Documentation about project and processes (as GitHub markdown files (e.g., Readme and interlinked .md files)).
-* Link to a running workflow(s) and/or instantiation(s) of a: Link to start form(s) and/or cloud-based deployment(s) and Link to presentation slides
+  * Modelling artefacts (such as BPMN, DMN, CMMN, etc.) and, if required, other project artefacts (such as configuration files, source code, etc.)
+  * Documentation about project and processes (as GitHub markdown files (e.g., Readme and interlinked .md files)).
+* Link to a running workflow(s) and/or instantiation(s) of a: 
+  * Link to start form(s) and/or cloud-based deployment(s)
+  * Link to presentation slides
 
 ## Background
 For every veterinary drug marketed in Switzerland each Swissmedic approved drug information must be published online, according to law. Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service, while Refdata currently has given the contract for this publication to the Institute for Veterinary Pharmacology and Toxicology at the University of Zurich. There the Veterinary Drug Compendium (VDC) is published by the CliniPharm Team. Whenever a new drug comes to market, leaves the market, or the approved information of an existing drug is changed, the respective entry of this drug in the VDC has to be created, deleted or changed. For these purposes the CliniPharm Team receives new documents from authorization holders on a regular basis. The CliniPharm personel is split into the Entry Team whose members create, change or delete entries in the VDC, and the Review Team who ensure quality by reviewing the Entry Team's work.
