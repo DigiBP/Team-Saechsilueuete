@@ -8,29 +8,20 @@ Santome Bragado Ruben\
 Schwander Sandro
 
 ## Table of Contents
-
+1. [Background](#background)
+3. [The As-Is-Process](#the-as-is-process)
+4. [The To-Be-Process](#the-to-be-process)
 
 
 
 ## Introduction
 
-A team must digitalise processes based on an own project idea or a selected pre-defined project case. An own project idea is recommended and appreciated.
-
-The following deliverables are mandatory:
-* Link to GitHub repositories containing:
-  * Modelling artefacts (such as BPMN, DMN, CMMN, etc.) and, if required, other project artefacts (such as configuration files, source code, etc.)
-  * Documentation about project and processes (as GitHub markdown files (e.g., Readme and interlinked .md files)).
-* Link to a running workflow(s) and/or instantiation(s) of a: 
-  * Link to start form(s) and/or cloud-based deployment(s)
-  * Link to presentation slides
 
 ## Background
 For every veterinary drug marketed in Switzerland each Swissmedic approved drug information must be published online, according to law. Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service, while Refdata currently has given the contract for this publication to the Institute for Veterinary Pharmacology and Toxicology at the University of Zurich. There the Veterinary Drug Compendium (VDC) is published by the CliniPharm Team. Whenever a new drug comes to market, leaves the market, or the approved information of an existing drug is changed, the respective entry of this drug in the VDC has to be created, deleted or changed. For these purposes the CliniPharm Team receives new documents from authorization holders on a regular basis. The CliniPharm personel is split into the Entry Team whose members create, change or delete entries in the VDC, and the Review Team who ensure quality by reviewing the Entry Team's work.
 
-## The 'As-Is-Process':
+## The As-Is-Process
 ![VDC_as-is_20221218](https://user-images.githubusercontent.com/115710100/208304796-c8482ae9-cb6f-4f60-ac74-11744d09a648.png)
-
-### Description of the Workflow-Steps
 
 **Documents Received:**
 
@@ -89,10 +80,8 @@ The Entry Team member files the approval email together with the other documents
 
 The Entry Team member marks the approved entry in the system as OK. The entry will then automatically be published with the next update. (VDC updates are started manually by a member of the Entry Team or Revision Team once or twice a week.)
 
-## The 'To-Be-Process': 
+## The To-Be-Process
 ![image](https://user-images.githubusercontent.com/8128472/208300798-1371d125-2083-4f52-9e9c-f679538d3e20.png)
-
-### Description of the Workflow-Steps
 
 **Documents Received and Filed:**
 
