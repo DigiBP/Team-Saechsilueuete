@@ -38,7 +38,7 @@ Schwander Sandro
 
 ## Introduction
 
-A team must digitalise processes based on an own project idea or a selected pre-defined project case. An own project idea is recommended and appreciated.
+The task for this project was to as a team digitalize a processes based on an own project idea or a selected pre-defined project case. We chose an own project idea.
 
 The following deliverables are mandatory:
 * Link to GitHub repositories containing:
