@@ -30,7 +30,7 @@ For every veterinary drug marketed in Switzerland each Swissmedic approved drug 
 ## The 'As-Is-Process':
 ![VDC_as-is_20221218](https://user-images.githubusercontent.com/115710100/208304796-c8482ae9-cb6f-4f60-ac74-11744d09a648.png)
 
-### Description of the Workflow-Steps
+## Description of the Workflow-Steps
 
 ### Documents Received:
 
