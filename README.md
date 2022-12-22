@@ -49,7 +49,7 @@ The following deliverables are mandatory:
   * Link to presentation slides
 
 ## Background
-For every veterinary drug marketed in Switzerland each Swissmedic approved drug information must be published online, according to law. Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service, while Refdata currently has given the contract for this publication to the Institute for Veterinary Pharmacology and Toxicology at the University of Zurich. There the Veterinary Drug Compendium (VDC) is published by the CliniPharm Team. Whenever a new drug comes to market, leaves the market, or the approved information of an existing drug is changed, the respective entry of this drug in the VDC has to be created, deleted or changed. For these purposes the CliniPharm Team receives new documents from authorization holders on a regular basis. The CliniPharm personel is split into the Entry Team whose members create, change or delete entries in the VDC, and the Review Team who ensure quality by reviewing the Entry Team's work.
+For every veterinary drug marketed in Switzerland, according to law, each Swissmedic-approved drug information must be published online. Pharma companies who are authorization holders for veterinary drugs pay the foundation Refdata for this service. Refdata currently has given the contract for this publication to the Institute for Veterinary Pharmacology and Toxicology (IVPT) at the University of Zurich. The CliniPharm Team, part of the IVPT, publishes the Veterinary Drug Compendium (VDC). Whenever a new drug comes to market, leaves the market, or the approved information of an existing drug is changed, the respective entry of this drug in the VDC has to be created, deleted, or changed. For these purposes, the CliniPharm Team regularly receives new documents from authorization holders. The CliniPharm personnel is split into the Entry Team, whose members create, change or delete entries in the VDC, and the Review Team, who ensure quality by reviewing the Entry Team's work.
 
 ## The 'As-Is-Process':
 ![VDC_as-is_20221218](https://user-images.githubusercontent.com/115710100/208304796-c8482ae9-cb6f-4f60-ac74-11744d09a648.png)
@@ -58,15 +58,15 @@ For every veterinary drug marketed in Switzerland each Swissmedic approved drug 
 
 ### Documents received:
 
-The process starts when an authorization holder uploads documents to the dedicated file hosting service. The current system sends an email to the Entry Team’s inbox reporting uploaded documents every two hours during working hours.
+TThe process starts when an authorization holder uploads documents to the dedicated file hosting service. The current system sends an email to the Entry Team’s inbox reporting uploaded documents every two hours during working hours.
 
 ### File documents:
 
-In this step, an Entry Team member moves the received documents from the folder of the dedicated file hosting service to local filing. Locally all the documents belonging to one process are stored in one folder. These folders are named by convention to enable retrieval of information for specific amendments in the VDC.
+In this step, an Entry Team member moves the received documents from the folder of the dedicated file hosting service to the local filing. Locally all the documents belonging to one process are stored in one folder. These folders are named by convention to enable retrieval of information for specific amendments in the VDC.
 
 ### Review Document Completeness:
 
-Next, the filed documents are checked for completeness. The Entry Team member looks at the received documents and determines if they are complete and correct. To determine completeness, the worker reads in the documents if this is a new entry or what type of change needs to be done and which information texts have been approved by Swissmedic. Depending on this, the required documents can vary. To determine correctness, the worker looks at the content of the received documents and checks if it fulfills specific criteria (e.g. in the PDF-files, there is no Swissmedic logo or stamp allowed).
+Next, the filed documents are checked for completeness. The Entry Team member looks at the received documents and determines if they are complete and correct. To determine completeness, the worker reads in the documents if this is a new entry, what type of change needs to be done, and which information texts have been approved by Swissmedic. Depending on this, the required documents can vary. To determine correctness, the worker looks at the content of the received documents and checks if it fulfills specific criteria (e.g., in the PDF files, there is no Swissmedic logo or stamp allowed).
 
 ### Request missing documents or information:
 
@@ -74,8 +74,8 @@ If documents or information are incomplete, an Entry Team member sends an email 
 
 ### Create or update data entry:
 
-For a new data entry, the Entry Team member creates a new entry in the database program (Paradox 4.5), labeling it with the unique Swissmedic-Number of the drug. Then firstly, the complete German version of the specialist information on the drug (called Fachinformation (FI)) is copied into the required fields. Secondly, the link(s) to the information page(s) about the active substance(s) of the drug is/are created. (These information pages are a separate service also provided by the CliniPharm team.) Thirdly, the species and route of application of the drug are entered into the system, and also – where this applies - the dosage of the drug per kilogram bodyweight. Fourthly, the duration of the withdrawal periods is entered into the system for drugs that are given to livestock. As the last step, PDF files of the specialist information and package leaflet are copied to the dedicated folder and renamed according to the internal convention (so they are linked to the published entry).
-For changing an existing data entry, the necessary changes are done in the above-mentioned sections.
+For a new data entry, the Entry Team member creates a new entry in the database program (Paradox 4.5), labeling it with the unique Swissmedic-Number of the drug. Then firstly, the complete German version of the specialist information on the drug (called Fachinformation (FI)) is copied into the required fields. Secondly, the link(s) to the information page(s) about the active substance(s) of the drug is/are created. (These information pages are a separate service the CliniPharm team provides.) Thirdly, the species and route of application of the drug are entered into the system, and also – where this applies - the dosage of the drug per kilogram bodyweight. Fourthly, the duration of the withdrawal periods is entered into the system for drugs that are given to livestock. As the last step, PDF files of the specialist information and package leaflet are copied to the dedicated folder and renamed according to the internal convention (so they are linked to the published entry).  
+The necessary changes are done in the abovementioned steps for changing an existing data entry.
 
 ### Send Review Request:
 
